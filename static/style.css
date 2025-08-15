@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url("farm.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Dark overlay for readability */
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 50, 0, 0.35);
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 40px;
+  width: 370px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin: 10px 0;
+  transition: 0.3s ease;
+}
+
+.input-group i {
+  margin-right: 10px;
+  color: #2e7d32;
+  font-size: 1.1rem;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.input-group:focus-within {
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.7);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #4CAF50, #2e7d32);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #45a049, #256d27);
+  transform: scale(1.03);
+}
+
+.result {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 12px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+  .container {
+    width: 90%;
+    padding: 30px;
+  }
+}
