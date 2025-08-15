@@ -1,1 +1,2 @@
-# HarvestHint
+# 🌾HarvestHint – Crop Prediction App
+HarvestHint is a machine learning–powered web application that helps farmers and agricultural enthusiasts identify the most suitable crop to grow based on soil nutrients, weather conditions, and environmental factors. Users can input parameters like Nitrogen, Phosphorus, Potassium, temperature, humidity, pH level, and rainfall, and the app instantly predicts the ideal crop for optimal yield. Built with Flask, Pandas, and Scikit-learn, it features a modern, responsive UI for a smooth user experience.
