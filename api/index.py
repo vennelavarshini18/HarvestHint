@@ -1,3 +1,4 @@
+import os
 import numpy as np
 from flask import Flask, request, render_template
 import pickle
@@ -20,5 +21,6 @@ def predict():
     except Exception:
         return render_template('index.html', prediction_text='Error in prediction. Please check your input.')
 
-def handler(request, *args, **kwargs):
-    return app(request.environ, start_response=lambda *a, **k: None)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))  # Render sets PORT
+    app.run(host="0.0.0.0", port=port)
